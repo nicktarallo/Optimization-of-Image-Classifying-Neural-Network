@@ -10,11 +10,10 @@ import argparse
 parser = argparse.ArgumentParser(description="test settings")
 
 parser.add_argument("--batch_size", type=int, help="batch size for inference")
-parser.add_argument("--use_amp", action="store_true", help="use amp in inference")
+
 args = parser.parse_args()
 
 inference_batch_size = args.batch_size if args.batch_size else 32
-use_amp = args.use_amp
 
 # Define the device (CUDA if available, otherwise CPU)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -59,8 +58,7 @@ while inference_batch_size <= len(test_dataset):
             images, labels = images.to(device), labels.to(device)
 
             # Perform inference
-            with torch.cuda.amp.autocast(enabled=use_amp):
-                outputs = model(images)
+            outputs = model(images)
             _, predicted = torch.max(outputs, 1)
             total += labels.size(0)
             correct += (predicted == labels).sum().item()

@@ -1,0 +1,46 @@
+cuda
+Model reloaded from 'fine_tuned_model.pth'
+Inference batch size: 1
+Accuracy: 80.18%
+Total Inference Time: 49.00 seconds
+Time per Image: 0.0049 seconds
+Inference batch size: 2
+Accuracy: 80.18%
+Total Inference Time: 30.96 seconds
+Time per Image: 0.0031 seconds
+Inference batch size: 4
+Accuracy: 80.18%
+Total Inference Time: 22.05 seconds
+Time per Image: 0.0022 seconds
+Inference batch size: 8
+Accuracy: 80.18%
+Total Inference Time: 20.06 seconds
+Time per Image: 0.0020 seconds
+Inference batch size: 16
+Accuracy: 80.18%
+Total Inference Time: 19.45 seconds
+Time per Image: 0.0019 seconds
+Inference batch size: 32
+Accuracy: 80.18%
+Total Inference Time: 19.17 seconds
+Time per Image: 0.0019 seconds
+Inference batch size: 64
+Accuracy: 80.18%
+Total Inference Time: 19.54 seconds
+Time per Image: 0.0020 seconds
+Inference batch size: 128
+Accuracy: 80.18%
+Total Inference Time: 21.55 seconds
+Time per Image: 0.0022 seconds
+Inference batch size: 256
+Accuracy: 80.18%
+Total Inference Time: 20.58 seconds
+Time per Image: 0.0021 seconds
+Inference batch size: 512
+Accuracy: 80.18%
+Total Inference Time: 20.82 seconds
+Time per Image: 0.0021 seconds
+Inference batch size: 1024
+Accuracy: 80.18%
+Total Inference Time: 20.12 seconds
+Time per Image: 0.0020 seconds

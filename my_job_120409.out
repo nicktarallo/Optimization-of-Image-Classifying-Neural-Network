@@ -1,0 +1,5 @@
+cuda
+Model reloaded from 'fine_tuned_model.pth'
+Accuracy: 80.18%
+Total Inference Time: 21.92 seconds
+Time per Image: 0.0022 seconds
