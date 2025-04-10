@@ -7,7 +7,6 @@
 #SBATCH --error=my_job_%j.err
 #SBATCH --gres=gpu:p100:1
 #SBATCH --partition=courses-gpu
-#SBATCH --cpus-per-task=5
 
 lscpu
 module load anaconda3/2024.06 cuda/12.3.0
