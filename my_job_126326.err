@@ -1,0 +1,32 @@
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/home/tarallo.n/EECE5640-Project/testing_cifar10.py", line 45, in <module>
+    test_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform, num_workers=num_workers)
+TypeError: CIFAR10.__init__() got an unexpected keyword argument 'num_workers'
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/home/tarallo.n/EECE5640-Project/testing_cifar10.py", line 45, in <module>
+    test_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform, num_workers=num_workers)
+TypeError: CIFAR10.__init__() got an unexpected keyword argument 'num_workers'
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/home/tarallo.n/EECE5640-Project/testing_cifar10.py", line 45, in <module>
+    test_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform, num_workers=num_workers)
+TypeError: CIFAR10.__init__() got an unexpected keyword argument 'num_workers'
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/home/tarallo.n/EECE5640-Project/testing_cifar10.py", line 45, in <module>
+    test_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform, num_workers=num_workers)
+TypeError: CIFAR10.__init__() got an unexpected keyword argument 'num_workers'

@@ -1,0 +1,12 @@
+0 workers
+cuda
+Model reloaded from 'fine_tuned_model.pth'
+1 workers
+cuda
+Model reloaded from 'fine_tuned_model.pth'
+2 workers
+cuda
+Model reloaded from 'fine_tuned_model.pth'
+4 workers
+cuda
+Model reloaded from 'fine_tuned_model.pth'

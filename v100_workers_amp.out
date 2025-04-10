@@ -1,0 +1,449 @@
+workers v100 amp
+0 workers
+cuda
+Model reloaded from 'fine_tuned_model.pth'
+Pytorch threads: 28
+Inference batch size: 1
+Accuracy: 80.19%
+Total Inference Time: 42.29 seconds
+Time per Image: 0.0042 seconds
+Inference batch size: 2
+Accuracy: 80.18%
+Total Inference Time: 25.21 seconds
+Time per Image: 0.0025 seconds
+Inference batch size: 4
+Accuracy: 80.19%
+Total Inference Time: 17.44 seconds
+Time per Image: 0.0017 seconds
+Inference batch size: 8
+Accuracy: 80.19%
+Total Inference Time: 14.11 seconds
+Time per Image: 0.0014 seconds
+Inference batch size: 16
+Accuracy: 80.19%
+Total Inference Time: 12.59 seconds
+Time per Image: 0.0013 seconds
+Inference batch size: 32
+Accuracy: 80.19%
+Total Inference Time: 12.14 seconds
+Time per Image: 0.0012 seconds
+Inference batch size: 64
+Accuracy: 80.19%
+Total Inference Time: 12.94 seconds
+Time per Image: 0.0013 seconds
+Inference batch size: 128
+Accuracy: 80.19%
+Total Inference Time: 12.66 seconds
+Time per Image: 0.0013 seconds
+Inference batch size: 256
+Accuracy: 80.19%
+Total Inference Time: 14.20 seconds
+Time per Image: 0.0014 seconds
+Inference batch size: 512
+Accuracy: 80.19%
+Total Inference Time: 13.72 seconds
+Time per Image: 0.0014 seconds
+Inference batch size: 1024
+Accuracy: 80.19%
+Total Inference Time: 13.95 seconds
+Time per Image: 0.0014 seconds
+Inference batch size: 2048
+Accuracy: 80.19%
+Total Inference Time: 13.48 seconds
+Time per Image: 0.0013 seconds
+Inference batch size: 4096
+Accuracy: 80.19%
+Total Inference Time: 13.44 seconds
+Time per Image: 0.0013 seconds
+1 workers
+cuda
+Model reloaded from 'fine_tuned_model.pth'
+Pytorch threads: 28
+Inference batch size: 1
+Accuracy: 80.19%
+Total Inference Time: 38.83 seconds
+Time per Image: 0.0039 seconds
+Inference batch size: 2
+Accuracy: 80.18%
+Total Inference Time: 20.73 seconds
+Time per Image: 0.0021 seconds
+Inference batch size: 4
+Accuracy: 80.19%
+Total Inference Time: 17.05 seconds
+Time per Image: 0.0017 seconds
+Inference batch size: 8
+Accuracy: 80.19%
+Total Inference Time: 16.63 seconds
+Time per Image: 0.0017 seconds
+Inference batch size: 16
+Accuracy: 80.19%
+Total Inference Time: 16.52 seconds
+Time per Image: 0.0017 seconds
+Inference batch size: 32
+Accuracy: 80.19%
+Total Inference Time: 16.48 seconds
+Time per Image: 0.0016 seconds
+Inference batch size: 64
+Accuracy: 80.19%
+Total Inference Time: 16.70 seconds
+Time per Image: 0.0017 seconds
+Inference batch size: 128
+Accuracy: 80.19%
+Total Inference Time: 16.72 seconds
+Time per Image: 0.0017 seconds
+Inference batch size: 256
+Accuracy: 80.19%
+Total Inference Time: 17.45 seconds
+Time per Image: 0.0017 seconds
+Inference batch size: 512
+Accuracy: 80.19%
+Total Inference Time: 16.98 seconds
+Time per Image: 0.0017 seconds
+Inference batch size: 1024
+Accuracy: 80.19%
+Total Inference Time: 18.33 seconds
+Time per Image: 0.0018 seconds
+Inference batch size: 2048
+Accuracy: 80.19%
+Total Inference Time: 19.76 seconds
+Time per Image: 0.0020 seconds
+Inference batch size: 4096
+Accuracy: 80.19%
+Total Inference Time: 21.04 seconds
+Time per Image: 0.0021 seconds
+2 workers
+cuda
+Model reloaded from 'fine_tuned_model.pth'
+Pytorch threads: 28
+Inference batch size: 1
+Accuracy: 80.19%
+Total Inference Time: 38.67 seconds
+Time per Image: 0.0039 seconds
+Inference batch size: 2
+Accuracy: 80.18%
+Total Inference Time: 21.16 seconds
+Time per Image: 0.0021 seconds
+Inference batch size: 4
+Accuracy: 80.19%
+Total Inference Time: 11.83 seconds
+Time per Image: 0.0012 seconds
+Inference batch size: 8
+Accuracy: 80.19%
+Total Inference Time: 8.49 seconds
+Time per Image: 0.0008 seconds
+Inference batch size: 16
+Accuracy: 80.19%
+Total Inference Time: 8.44 seconds
+Time per Image: 0.0008 seconds
+Inference batch size: 32
+Accuracy: 80.19%
+Total Inference Time: 8.42 seconds
+Time per Image: 0.0008 seconds
+Inference batch size: 64
+Accuracy: 80.19%
+Total Inference Time: 8.42 seconds
+Time per Image: 0.0008 seconds
+Inference batch size: 128
+Accuracy: 80.19%
+Total Inference Time: 8.42 seconds
+Time per Image: 0.0008 seconds
+Inference batch size: 256
+Accuracy: 80.19%
+Total Inference Time: 8.80 seconds
+Time per Image: 0.0009 seconds
+Inference batch size: 512
+Accuracy: 80.19%
+Total Inference Time: 9.07 seconds
+Time per Image: 0.0009 seconds
+Inference batch size: 1024
+Accuracy: 80.19%
+Total Inference Time: 10.11 seconds
+Time per Image: 0.0010 seconds
+Inference batch size: 2048
+Accuracy: 80.19%
+Total Inference Time: 12.16 seconds
+Time per Image: 0.0012 seconds
+Inference batch size: 4096
+Accuracy: 80.19%
+Total Inference Time: 12.82 seconds
+Time per Image: 0.0013 seconds
+4 workers
+cuda
+Model reloaded from 'fine_tuned_model.pth'
+Pytorch threads: 28
+Inference batch size: 1
+Accuracy: 80.19%
+Total Inference Time: 39.27 seconds
+Time per Image: 0.0039 seconds
+Inference batch size: 2
+Accuracy: 80.18%
+Total Inference Time: 21.41 seconds
+Time per Image: 0.0021 seconds
+Inference batch size: 4
+Accuracy: 80.19%
+Total Inference Time: 12.17 seconds
+Time per Image: 0.0012 seconds
+Inference batch size: 8
+Accuracy: 80.19%
+Total Inference Time: 7.68 seconds
+Time per Image: 0.0008 seconds
+Inference batch size: 16
+Accuracy: 80.19%
+Total Inference Time: 5.40 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 32
+Accuracy: 80.19%
+Total Inference Time: 4.43 seconds
+Time per Image: 0.0004 seconds
+Inference batch size: 64
+Accuracy: 80.19%
+Total Inference Time: 4.46 seconds
+Time per Image: 0.0004 seconds
+Inference batch size: 128
+Accuracy: 80.19%
+Total Inference Time: 4.73 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 256
+Accuracy: 80.19%
+Total Inference Time: 4.89 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 512
+Accuracy: 80.19%
+Total Inference Time: 5.87 seconds
+Time per Image: 0.0006 seconds
+Inference batch size: 1024
+Accuracy: 80.19%
+Total Inference Time: 6.99 seconds
+Time per Image: 0.0007 seconds
+Inference batch size: 2048
+Accuracy: 80.19%
+Total Inference Time: 8.28 seconds
+Time per Image: 0.0008 seconds
+Inference batch size: 4096
+Accuracy: 80.19%
+Total Inference Time: 11.86 seconds
+Time per Image: 0.0012 seconds
+8 workers
+cuda
+Model reloaded from 'fine_tuned_model.pth'
+Pytorch threads: 28
+Inference batch size: 1
+Accuracy: 80.19%
+Total Inference Time: 45.82 seconds
+Time per Image: 0.0046 seconds
+Inference batch size: 2
+Accuracy: 80.18%
+Total Inference Time: 21.26 seconds
+Time per Image: 0.0021 seconds
+Inference batch size: 4
+Accuracy: 80.19%
+Total Inference Time: 12.45 seconds
+Time per Image: 0.0012 seconds
+Inference batch size: 8
+Accuracy: 80.19%
+Total Inference Time: 7.06 seconds
+Time per Image: 0.0007 seconds
+Inference batch size: 16
+Accuracy: 80.19%
+Total Inference Time: 5.55 seconds
+Time per Image: 0.0006 seconds
+Inference batch size: 32
+Accuracy: 80.19%
+Total Inference Time: 4.33 seconds
+Time per Image: 0.0004 seconds
+Inference batch size: 64
+Accuracy: 80.19%
+Total Inference Time: 4.07 seconds
+Time per Image: 0.0004 seconds
+Inference batch size: 128
+Accuracy: 80.19%
+Total Inference Time: 4.06 seconds
+Time per Image: 0.0004 seconds
+Inference batch size: 256
+Accuracy: 80.19%
+Total Inference Time: 4.19 seconds
+Time per Image: 0.0004 seconds
+Inference batch size: 512
+Accuracy: 80.19%
+Total Inference Time: 4.60 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 1024
+Accuracy: 80.19%
+Total Inference Time: 5.58 seconds
+Time per Image: 0.0006 seconds
+Inference batch size: 2048
+Accuracy: 80.19%
+Total Inference Time: 7.88 seconds
+Time per Image: 0.0008 seconds
+Inference batch size: 4096
+Accuracy: 80.19%
+Total Inference Time: 12.70 seconds
+Time per Image: 0.0013 seconds
+16 workers
+cuda
+Model reloaded from 'fine_tuned_model.pth'
+Pytorch threads: 28
+Inference batch size: 1
+Accuracy: 80.19%
+Total Inference Time: 41.22 seconds
+Time per Image: 0.0041 seconds
+Inference batch size: 2
+Accuracy: 80.18%
+Total Inference Time: 21.60 seconds
+Time per Image: 0.0022 seconds
+Inference batch size: 4
+Accuracy: 80.19%
+Total Inference Time: 12.67 seconds
+Time per Image: 0.0013 seconds
+Inference batch size: 8
+Accuracy: 80.19%
+Total Inference Time: 7.91 seconds
+Time per Image: 0.0008 seconds
+Inference batch size: 16
+Accuracy: 80.19%
+Total Inference Time: 5.46 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 32
+Accuracy: 80.19%
+Total Inference Time: 4.69 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 64
+Accuracy: 80.19%
+Total Inference Time: 4.23 seconds
+Time per Image: 0.0004 seconds
+Inference batch size: 128
+Accuracy: 80.19%
+Total Inference Time: 4.01 seconds
+Time per Image: 0.0004 seconds
+Inference batch size: 256
+Accuracy: 80.19%
+Total Inference Time: 4.15 seconds
+Time per Image: 0.0004 seconds
+Inference batch size: 512
+Accuracy: 80.19%
+Total Inference Time: 4.61 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 1024
+Accuracy: 80.19%
+Total Inference Time: 5.67 seconds
+Time per Image: 0.0006 seconds
+Inference batch size: 2048
+Accuracy: 80.19%
+Total Inference Time: 7.87 seconds
+Time per Image: 0.0008 seconds
+Inference batch size: 4096
+Accuracy: 80.19%
+Total Inference Time: 12.48 seconds
+Time per Image: 0.0012 seconds
+28 workers
+cuda
+Model reloaded from 'fine_tuned_model.pth'
+Pytorch threads: 28
+Inference batch size: 1
+Accuracy: 80.19%
+Total Inference Time: 43.62 seconds
+Time per Image: 0.0044 seconds
+Inference batch size: 2
+Accuracy: 80.18%
+Total Inference Time: 22.05 seconds
+Time per Image: 0.0022 seconds
+Inference batch size: 4
+Accuracy: 80.19%
+Total Inference Time: 12.67 seconds
+Time per Image: 0.0013 seconds
+Inference batch size: 8
+Accuracy: 80.19%
+Total Inference Time: 8.11 seconds
+Time per Image: 0.0008 seconds
+Inference batch size: 16
+Accuracy: 80.19%
+Total Inference Time: 5.70 seconds
+Time per Image: 0.0006 seconds
+Inference batch size: 32
+Accuracy: 80.19%
+Total Inference Time: 4.94 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 64
+Accuracy: 80.19%
+Total Inference Time: 4.51 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 128
+Accuracy: 80.19%
+Total Inference Time: 4.65 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 256
+Accuracy: 80.19%
+Total Inference Time: 4.94 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 512
+Accuracy: 80.19%
+Total Inference Time: 4.95 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 1024
+Accuracy: 80.19%
+Total Inference Time: 5.83 seconds
+Time per Image: 0.0006 seconds
+Inference batch size: 2048
+Accuracy: 80.19%
+Total Inference Time: 7.84 seconds
+Time per Image: 0.0008 seconds
+Inference batch size: 4096
+Accuracy: 80.19%
+Total Inference Time: 12.74 seconds
+Time per Image: 0.0013 seconds
+56 workers
+cuda
+Model reloaded from 'fine_tuned_model.pth'
+Pytorch threads: 28
+Inference batch size: 1
+Accuracy: 80.19%
+Total Inference Time: 40.30 seconds
+Time per Image: 0.0040 seconds
+Inference batch size: 2
+Accuracy: 80.18%
+Total Inference Time: 22.01 seconds
+Time per Image: 0.0022 seconds
+Inference batch size: 4
+Accuracy: 80.19%
+Total Inference Time: 12.71 seconds
+Time per Image: 0.0013 seconds
+Inference batch size: 8
+Accuracy: 80.19%
+Total Inference Time: 8.38 seconds
+Time per Image: 0.0008 seconds
+Inference batch size: 16
+Accuracy: 80.19%
+Total Inference Time: 6.02 seconds
+Time per Image: 0.0006 seconds
+Inference batch size: 32
+Accuracy: 80.19%
+Total Inference Time: 5.01 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 64
+Accuracy: 80.19%
+Total Inference Time: 4.70 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 128
+Accuracy: 80.19%
+Total Inference Time: 4.60 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 256
+Accuracy: 80.19%
+Total Inference Time: 4.86 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 512
+Accuracy: 80.19%
+Total Inference Time: 5.18 seconds
+Time per Image: 0.0005 seconds
+Inference batch size: 1024
+Accuracy: 80.19%
+Total Inference Time: 6.39 seconds
+Time per Image: 0.0006 seconds
+Inference batch size: 2048
+Accuracy: 80.19%
+Total Inference Time: 8.73 seconds
+Time per Image: 0.0009 seconds
+Inference batch size: 4096
+Accuracy: 80.19%
+Total Inference Time: 12.86 seconds
+Time per Image: 0.0013 seconds

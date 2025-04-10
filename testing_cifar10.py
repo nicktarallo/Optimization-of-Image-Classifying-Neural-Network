@@ -11,10 +11,12 @@ parser = argparse.ArgumentParser(description="test settings")
 
 parser.add_argument("--batch_size", type=int, help="batch size for inference")
 parser.add_argument("--use_amp", action="store_true", help="use amp in inference")
+parser.add_argument("--num_workers", type=int, help="num workers for data loader (default 0)")
 args = parser.parse_args()
 
 inference_batch_size = args.batch_size if args.batch_size else 32
 use_amp = args.use_amp
+num_workers = args.num_workers if args.num_workers else 0
 
 # Define the device (CUDA if available, otherwise CPU)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -39,15 +41,17 @@ model.eval()  # Set the model to evaluation mode
 print("Model reloaded from 'fine_tuned_model.pth'")
 
 # Load CIFAR-10 dataset
-train_dataset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
+# train_dataset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
 test_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
+
+print('Pytorch threads:', torch.get_num_threads())
 
 inference_batch_size = 1
 while inference_batch_size <= len(test_dataset):
 
     # Create DataLoader
     # train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-    test_loader = DataLoader(test_dataset, batch_size=inference_batch_size, shuffle=False)
+    test_loader = DataLoader(test_dataset, batch_size=inference_batch_size, shuffle=False, num_workers=num_workers)
     # Benchmark inference on the test set
     start_time = time.time()
     correct = 0
