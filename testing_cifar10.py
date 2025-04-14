@@ -13,12 +13,14 @@ parser.add_argument("--batch_size", type=int, help="batch size for inference")
 parser.add_argument("--use_amp", action="store_true", help="use amp in inference")
 parser.add_argument("--num_workers", type=int, help="num workers for data loader (default 0)")
 parser.add_argument("--use_non_blocking", action="store_true", help="pin memory and use non blocking host-to-device transfers")
+parser.add_argument("--track_memory", action="store_true", help="print peak GPU memory usage for each batch size")
 args = parser.parse_args()
 
 inference_batch_size = args.batch_size if args.batch_size else 32
 use_amp = args.use_amp
 num_workers = args.num_workers if args.num_workers else 0
 use_non_blocking = args.use_non_blocking
+track_memory = args.track_memory
 
 # Define the device (CUDA if available, otherwise CPU)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -58,6 +60,8 @@ while inference_batch_size <= len(test_dataset):
     start_time = time.time()
     correct = 0
     total = 0
+    if track_memory:
+        torch.cuda.reset_peak_memory_stats()
 
     with torch.no_grad():
         for batch in test_loader:
@@ -79,4 +83,6 @@ while inference_batch_size <= len(test_dataset):
     print(f"Accuracy: {accuracy:.2f}%")
     print(f"Total Inference Time: {inference_time:.2f} seconds")
     print(f"Time per Image: {inference_time / total:.4f} seconds")
+    if track_memory:
+        print(f"Peak memory usage: {torch.cuda.max_memory_allocated() / 1024**2:.2f} MB")
     inference_batch_size *= 2

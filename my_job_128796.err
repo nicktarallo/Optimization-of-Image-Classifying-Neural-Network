@@ -1,0 +1,226 @@
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/home/tarallo.n/EECE5640-Project/testing_cifar10.py:68: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+Traceback (most recent call last):
+  File "/home/tarallo.n/EECE5640-Project/testing_cifar10.py", line 69, in <module>
+    outputs = model(images)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 285, in forward
+    return self._forward_impl(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 271, in _forward_impl
+    x = self.maxpool(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/pooling.py", line 213, in forward
+    return F.max_pool2d(
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/_jit_internal.py", line 624, in fn
+    return if_false(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/functional.py", line 830, in _max_pool2d
+    return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.25 GiB. GPU 0 has a total capacity of 31.74 GiB of which 1.74 GiB is free. Including non-PyTorch memory, this process has 29.95 GiB memory in use. Of the allocated memory 19.96 GiB is allocated by PyTorch, and 9.63 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/home/tarallo.n/EECE5640-Project/testing_cifar10.py:68: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+Traceback (most recent call last):
+  File "/home/tarallo.n/EECE5640-Project/testing_cifar10.py", line 69, in <module>
+    outputs = model(images)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 285, in forward
+    return self._forward_impl(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 271, in _forward_impl
+    x = self.maxpool(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/pooling.py", line 213, in forward
+    return F.max_pool2d(
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/_jit_internal.py", line 624, in fn
+    return if_false(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/functional.py", line 830, in _max_pool2d
+    return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.25 GiB. GPU 0 has a total capacity of 31.74 GiB of which 1.74 GiB is free. Including non-PyTorch memory, this process has 29.95 GiB memory in use. Of the allocated memory 19.96 GiB is allocated by PyTorch, and 9.63 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/home/tarallo.n/EECE5640-Project/testing_cifar10.py:68: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+Traceback (most recent call last):
+  File "/home/tarallo.n/EECE5640-Project/testing_cifar10.py", line 69, in <module>
+    outputs = model(images)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 285, in forward
+    return self._forward_impl(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 271, in _forward_impl
+    x = self.maxpool(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/pooling.py", line 213, in forward
+    return F.max_pool2d(
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/_jit_internal.py", line 624, in fn
+    return if_false(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/functional.py", line 830, in _max_pool2d
+    return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.25 GiB. GPU 0 has a total capacity of 31.74 GiB of which 1.73 GiB is free. Including non-PyTorch memory, this process has 29.95 GiB memory in use. Of the allocated memory 19.96 GiB is allocated by PyTorch, and 9.63 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/home/tarallo.n/EECE5640-Project/testing_cifar10.py:68: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+Traceback (most recent call last):
+  File "/home/tarallo.n/EECE5640-Project/testing_cifar10.py", line 69, in <module>
+    outputs = model(images)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 285, in forward
+    return self._forward_impl(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 271, in _forward_impl
+    x = self.maxpool(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/pooling.py", line 213, in forward
+    return F.max_pool2d(
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/_jit_internal.py", line 624, in fn
+    return if_false(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/functional.py", line 830, in _max_pool2d
+    return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.25 GiB. GPU 0 has a total capacity of 31.74 GiB of which 1.72 GiB is free. Including non-PyTorch memory, this process has 29.95 GiB memory in use. Of the allocated memory 19.96 GiB is allocated by PyTorch, and 9.63 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/home/tarallo.n/EECE5640-Project/testing_cifar10.py:68: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+Traceback (most recent call last):
+  File "/home/tarallo.n/EECE5640-Project/testing_cifar10.py", line 69, in <module>
+    outputs = model(images)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 285, in forward
+    return self._forward_impl(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 271, in _forward_impl
+    x = self.maxpool(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/pooling.py", line 213, in forward
+    return F.max_pool2d(
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/_jit_internal.py", line 624, in fn
+    return if_false(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/functional.py", line 830, in _max_pool2d
+    return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.25 GiB. GPU 0 has a total capacity of 31.74 GiB of which 1.70 GiB is free. Including non-PyTorch memory, this process has 29.95 GiB memory in use. Of the allocated memory 19.96 GiB is allocated by PyTorch, and 9.63 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/home/tarallo.n/EECE5640-Project/testing_cifar10.py:68: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+Traceback (most recent call last):
+  File "/home/tarallo.n/EECE5640-Project/testing_cifar10.py", line 69, in <module>
+    outputs = model(images)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 285, in forward
+    return self._forward_impl(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 271, in _forward_impl
+    x = self.maxpool(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/pooling.py", line 213, in forward
+    return F.max_pool2d(
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/_jit_internal.py", line 624, in fn
+    return if_false(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/functional.py", line 830, in _max_pool2d
+    return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.25 GiB. GPU 0 has a total capacity of 31.74 GiB of which 1.69 GiB is free. Including non-PyTorch memory, this process has 29.95 GiB memory in use. Of the allocated memory 19.96 GiB is allocated by PyTorch, and 9.63 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/home/tarallo.n/EECE5640-Project/testing_cifar10.py:68: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+Traceback (most recent call last):
+  File "/home/tarallo.n/EECE5640-Project/testing_cifar10.py", line 69, in <module>
+    outputs = model(images)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 285, in forward
+    return self._forward_impl(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 271, in _forward_impl
+    x = self.maxpool(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/pooling.py", line 213, in forward
+    return F.max_pool2d(
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/_jit_internal.py", line 624, in fn
+    return if_false(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/functional.py", line 830, in _max_pool2d
+    return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.25 GiB. GPU 0 has a total capacity of 31.74 GiB of which 1.67 GiB is free. Including non-PyTorch memory, this process has 29.95 GiB memory in use. Of the allocated memory 19.96 GiB is allocated by PyTorch, and 9.63 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/utils/data/dataloader.py:624: UserWarning: This DataLoader will create 56 worker processes in total. Our suggested max number of worker in current system is 28, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/home/tarallo.n/EECE5640-Project/testing_cifar10.py:68: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+Traceback (most recent call last):
+  File "/home/tarallo.n/EECE5640-Project/testing_cifar10.py", line 69, in <module>
+    outputs = model(images)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 285, in forward
+    return self._forward_impl(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torchvision/models/resnet.py", line 271, in _forward_impl
+    x = self.maxpool(x)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/pooling.py", line 213, in forward
+    return F.max_pool2d(
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/_jit_internal.py", line 624, in fn
+    return if_false(*args, **kwargs)
+  File "/home/tarallo.n/.conda/envs/pytorch_env/lib/python3.10/site-packages/torch/nn/functional.py", line 830, in _max_pool2d
+    return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.25 GiB. GPU 0 has a total capacity of 31.74 GiB of which 1.66 GiB is free. Including non-PyTorch memory, this process has 29.95 GiB memory in use. Of the allocated memory 19.96 GiB is allocated by PyTorch, and 9.63 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

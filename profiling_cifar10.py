@@ -12,11 +12,13 @@ parser = argparse.ArgumentParser(description="test settings")
 parser.add_argument("--batch_size", type=int, help="batch size for inference")
 parser.add_argument("--use_amp", action="store_true", help="use amp in inference")
 parser.add_argument("--num_workers", type=int, help="num workers for data loader (default 0)")
+parser.add_argument("--use_non_blocking", action="store_true", help="pin memory and use non blocking host-to-device transfers")
 args = parser.parse_args()
 
 inference_batch_size = args.batch_size if args.batch_size else 128
 use_amp = args.use_amp
 num_workers = args.num_workers if args.num_workers else 0
+use_non_blocking = args.use_non_blocking
 
 # Define the device (CUDA if available, otherwise CPU)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -48,7 +50,7 @@ print('Pytorch threads:', torch.get_num_threads())
 
 # Create DataLoader
 # train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-test_loader = DataLoader(test_dataset, batch_size=inference_batch_size, shuffle=False, num_workers=num_workers)
+test_loader = DataLoader(test_dataset, batch_size=inference_batch_size, shuffle=False, num_workers=num_workers, pin_memory=use_non_blocking)
 # Benchmark inference on the test set
 start_time = time.time()
 correct = 0
@@ -67,7 +69,7 @@ with torch.no_grad():
         if i >= warmups:
             torch.cuda.nvtx.range_push('transfer')
         images, labels = batch
-        images, labels = images.to(device), labels.to(device)
+        images, labels = images.to(device, non_blocking=use_non_blocking), labels.to(device, non_blocking=use_non_blocking)
         if i >= warmups:
             torch.cuda.nvtx.range_pop()
 
