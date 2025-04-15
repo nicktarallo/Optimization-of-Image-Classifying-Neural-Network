@@ -7,6 +7,14 @@ from torch.utils.data import DataLoader
 import time
 import argparse
 
+# Utilize unstructured pruning (prune 20% of weights)
+def prune_model(model, amount=0.2):
+    # Prune all Conv2d and Linear layers - prune weights that contribute least to end result
+    for name, module in model.named_modules():
+        if isinstance(module, nn.Conv2d) or isinstance(module, nn.Linear):
+            prune.l1_unstructured(module, name='weight', amount=amount)
+            prune.remove(module, 'weight')
+
 parser = argparse.ArgumentParser(description="Command line arguments for CIFAR-10 inference")
 
 parser.add_argument("--batch_size", type=int, help="batch size for inference")
@@ -42,6 +50,9 @@ model.fc = nn.Linear(model.fc.in_features, 10)
 
 # Load the saved model weights
 model.load_state_dict(torch.load('fine_tuned_model.pth'))
+# Use unstructured pruning if desired
+if do_pruning:
+    prune_model(model)
 model.to(device)
 model.eval()  # Set the model to evaluation mode
 print("Model reloaded from 'fine_tuned_model.pth'")
