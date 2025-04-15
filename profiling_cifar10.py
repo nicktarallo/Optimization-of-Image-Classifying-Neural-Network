@@ -7,18 +7,22 @@ from torch.utils.data import DataLoader
 import time
 import argparse
 
-parser = argparse.ArgumentParser(description="test settings")
+parser = argparse.ArgumentParser(description="Command line arguments for CIFAR-10 inference")
 
 parser.add_argument("--batch_size", type=int, help="batch size for inference")
 parser.add_argument("--use_amp", action="store_true", help="use amp in inference")
 parser.add_argument("--num_workers", type=int, help="num workers for data loader (default 0)")
 parser.add_argument("--use_non_blocking", action="store_true", help="pin memory and use non blocking host-to-device transfers")
+parser.add_argument("--track_memory", action="store_true", help="print peak GPU memory usage for each batch size")
+parser.add_argument("--do_pruning", action="store_true", help="prune 20% of weights")
 args = parser.parse_args()
 
 inference_batch_size = args.batch_size if args.batch_size else 128
 use_amp = args.use_amp
 num_workers = args.num_workers if args.num_workers else 0
 use_non_blocking = args.use_non_blocking
+track_memory = args.track_memory
+do_pruning = args.do_pruning
 
 # Define the device (CUDA if available, otherwise CPU)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -59,6 +63,8 @@ total = 0
 warmups = 1
 
 with torch.no_grad():
+    if track_memory:
+        torch.cuda.reset_peak_memory_stats()
     for i, batch in enumerate(test_loader):
         if i == warmups:
             torch.cuda.cudart().cudaProfilerStart()
@@ -98,3 +104,6 @@ print(f"Inference batch size: {inference_batch_size}")
 print(f"Accuracy: {accuracy:.2f}%")
 print(f"Total Inference Time: {inference_time:.2f} seconds")
 print(f"Time per Image: {inference_time / total:.4f} seconds")
+if track_memory:
+    print(f"Peak memory usage: {torch.cuda.max_memory_allocated() / 1024**2:.2f} MB")
+

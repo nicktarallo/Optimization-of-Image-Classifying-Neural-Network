@@ -6,21 +6,31 @@ import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 import time
 import argparse
+import torch.nn.utils.prune as prune
+
+# Utilize unstructured pruning (prune 20% of weights)
+def prune_model(model, amount=0.2):
+    # Prune all Conv2d and Linear layers - prune weights that contribute least to end result
+    for name, module in model.named_modules():
+        if isinstance(module, nn.Conv2d) or isinstance(module, nn.Linear):
+            prune.l1_unstructured(module, name='weight', amount=amount)
+            prune.remove(module, 'weight')
 
 parser = argparse.ArgumentParser(description="test settings")
 
-parser.add_argument("--batch_size", type=int, help="batch size for inference")
 parser.add_argument("--use_amp", action="store_true", help="use amp in inference")
 parser.add_argument("--num_workers", type=int, help="num workers for data loader (default 0)")
 parser.add_argument("--use_non_blocking", action="store_true", help="pin memory and use non blocking host-to-device transfers")
 parser.add_argument("--track_memory", action="store_true", help="print peak GPU memory usage for each batch size")
+parser.add_argument("--do_pruning", action="store_true", help="prune 20% of weights")
 args = parser.parse_args()
 
-inference_batch_size = args.batch_size if args.batch_size else 32
 use_amp = args.use_amp
 num_workers = args.num_workers if args.num_workers else 0
 use_non_blocking = args.use_non_blocking
 track_memory = args.track_memory
+do_pruning = args.do_pruning
+
 
 # Define the device (CUDA if available, otherwise CPU)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -40,6 +50,9 @@ model.fc = nn.Linear(model.fc.in_features, 10)
 
 # Load the saved model weights
 model.load_state_dict(torch.load('fine_tuned_model.pth'))
+# Use unstructred pruning if desired:
+if do_pruning:
+    prune_model(model)
 model.to(device)
 model.eval()  # Set the model to evaluation mode
 print("Model reloaded from 'fine_tuned_model.pth'")
