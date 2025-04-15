@@ -2,8 +2,15 @@
 
 ### All code should be run on Explorer
 
+Important packages include `torch` and `torchvision`. These will be installed when creating the conda environment as described later.
 
 ### Running inference:
+
+First, navigate to the `Project` folder if you are not in it already
+
+```bash
+cd Project
+```
 
 To run the code, you must create a Conda environment on Explorer.
 
@@ -41,6 +48,10 @@ For example to run with AMP and 4 workers, we could use:
 python testing_cifar10.py --use_amp --num_workers 4
 ```
 
+This code assumes that `fine_tuned_model.pth` is in the same folder that you are executing from. This should already be the case assuming that you are running directly from the `Project` folder.
+
+When running the code, it will automatically be saved in a `./data` folder that will be created from `torchvision` automatically downloading the CIFAR-10 dataset.
+
 ### Running inference with profiling:
 
 To run code that will generate a file that can be viewed on Nsight systems, run the `profiling_cifar10.py` file instead.
@@ -63,6 +74,8 @@ nsys profile -w true -t cuda,nvtx,osrt,cudnn,cublas -s cpu  --capture-range=cuda
 The flags for the Python program can be modified at the end of the `nsys profile` command.
 The name of the resulting `nsys-rep` file can be modified by changing what is after the -o in the command.
 
+The command is sourced from: https://dev-discuss.pytorch.org/t/using-nsight-systems-to-profile-gpu-workload/59
+
 ### Training:
 
 There is already a fully pre-trained and fine-tuned model in the file `fine_tuned_model.pth`. If you want to rerun training, you can acquire a GPU node and run the commands:
@@ -82,3 +95,7 @@ There are some example sbatch files that can be used to run various experiments 
 ```bash
 sbatch scripts/run_test.sh
 ```
+
+The `useful_outputs` folder contains a lot of outputs that were used when collecting data for experiments.
+
+Microsoft Copilot was used as a tool for answering questions related to PyTorch syntax for this code.

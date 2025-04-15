@@ -7,15 +7,11 @@ from torch.utils.data import DataLoader
 import time
 import argparse
 import torch.nn.utils.prune as prune
+from project_utils import prune_model
 
-# Utilize unstructured pruning (prune 20% of weights)
-def prune_model(model, amount=0.2):
-    # Prune all Conv2d and Linear layers - prune weights that contribute least to end result
-    for name, module in model.named_modules():
-        if isinstance(module, nn.Conv2d) or isinstance(module, nn.Linear):
-            prune.l1_unstructured(module, name='weight', amount=amount)
-            prune.remove(module, 'weight')
+# Microsoft Copilot was used as a tool for answering questions related to PyTorch syntax for this code.
 
+# Parse command line arguments and store them in variables:
 parser = argparse.ArgumentParser(description="test settings")
 
 parser.add_argument("--use_amp", action="store_true", help="use amp in inference")
@@ -36,19 +32,18 @@ do_pruning = args.do_pruning
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device)
 
-# Define transformations (normalize CIFAR-10 images and convert to tensor)
+# Transformations to resize images from 32x32 to 224x224, convert to tensor, and normalize to match the ImageNet transformations used when training ResNet-18
 transform = transforms.Compose([
-    transforms.Resize((224, 224)),  # Resize images to 224x224 to fit ResNet-18
+    transforms.Resize((224, 224)),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
 
-# --- Reload the model ---
-# Recreate the model architecture (same as the one we trained)
+# Load model and replace last layer
 model = models.resnet18(pretrained=False)
 model.fc = nn.Linear(model.fc.in_features, 10)
 
-# Load the saved model weights
+# Load fine-tuned weights
 model.load_state_dict(torch.load('fine_tuned_model.pth'))
 # Use unstructred pruning if desired:
 if do_pruning:
@@ -58,25 +53,26 @@ model.eval()  # Set the model to evaluation mode
 print("Model reloaded from 'fine_tuned_model.pth'")
 
 # Load CIFAR-10 dataset
-# train_dataset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
 test_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
 
 print('Pytorch threads:', torch.get_num_threads())
 
+# Loop through batch sizes, doubling each time:
 inference_batch_size = 1
 while inference_batch_size <= len(test_dataset):
 
     # Create DataLoader
-    # train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=inference_batch_size, shuffle=False, num_workers=num_workers, pin_memory=use_non_blocking)
     # Benchmark inference on the test set
     start_time = time.time()
     correct = 0
     total = 0
+    # Reset peak GPU memory usage for this batch size
     if track_memory:
         torch.cuda.reset_peak_memory_stats()
 
     with torch.no_grad():
+        # Go through each batch and move to the GPU
         for batch in test_loader:
             images, labels = batch
             images, labels = images.to(device, non_blocking=use_non_blocking), labels.to(device, non_blocking=use_non_blocking)
@@ -84,6 +80,7 @@ while inference_batch_size <= len(test_dataset):
             # Perform inference
             with torch.cuda.amp.autocast(enabled=use_amp):
                 outputs = model(images)
+            # Check how many results were correct
             _, predicted = torch.max(outputs, 1)
             total += labels.size(0)
             correct += (predicted == labels).sum().item()

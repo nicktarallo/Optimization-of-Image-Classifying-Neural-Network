@@ -7,6 +7,11 @@
 #SBATCH --error=my_job_%j.err
 #SBATCH --gres=gpu:p100:1
 #SBATCH --partition=courses-gpu
-#SBATCH --cpus-per-task=28
 
-getconf -a | grep CACHE
+lscpu
+module load anaconda3/2024.06 cuda/12.3.0
+source activate pytorch_env
+echo "no amp"
+python testing_cifar10.py --do_pruning
+echo "amp"
+python testing_cifar10.py --use_amp --do_pruning

@@ -7,6 +7,8 @@ from torch.utils.data import DataLoader
 import time
 import torch.optim as optim
 
+# Microsoft Copilot was used as a tool for answering questions related to PyTorch syntax for this code.
+
 # Resize, convert to tensor, and normalize to match ImageNet transformations used for training ResNet-18
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
